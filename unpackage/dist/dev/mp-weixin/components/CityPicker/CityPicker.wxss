@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+.citypicker.data-v-6f9503b8 {
+  background: #f7f7f7;
+}
+/* 搜索 */
+.city-search-wrap.data-v-6f9503b8 {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+  margin-bottom: 8rpx;
+  padding: 32rpx;
+  background: #fff;
+}
+.city-search-wrap .city-search.data-v-6f9503b8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 24rpx 32rpx;
+  width: 686rpx;
+  height: 88rpx;
+  background: #f7f7f7;
+  border-radius: 44rpx;
+}
+.city-search-wrap .city-search image.data-v-6f9503b8 {
+  margin-right: 16rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.city-search-wrap .city-search input.data-v-6f9503b8 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  font-size: 32rpx;
+  color: #333;
+}
+.city-search-wrap .city-search .placeholder.data-v-6f9503b8 {
+  font-size: 28rpx;
+  color: #ccc;
+}
+/* 定位 */
+.city-location-wrap.data-v-6f9503b8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 32rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.city-location-wrap .city-location.data-v-6f9503b8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #333333;
+}
+.city-location-wrap .city-location image.data-v-6f9503b8 {
+  margin-right: 8rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.city-location-wrap .get-location.data-v-6f9503b8 {
+  font-size: 28rpx;
+  color: #999999;
+}
+/* 热门 */
+.city-hot-wrap.data-v-6f9503b8 {
+  padding: 32rpx;
+}
+.city-hot-wrap .title.data-v-6f9503b8 {
+  margin-bottom: 32rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #999;
+}
+.city-hot-wrap .city-hot.data-v-6f9503b8 {
+  display: grid;
+  grid-template-columns: repeat(3, 192rpx);
+  grid-template-rows: repeat(3, 88rpx);
+  grid-gap: 24rpx;
+}
+.city-hot-wrap .city-hot .city-hot-li.data-v-6f9503b8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background: #fff;
+  border: 1rpx solid #cccccc;
+  border-radius: 16rpx;
+}
+/* 城市列表 */
+.city-list-wrap .spell.data-v-6f9503b8 {
+  padding: 12rpx 32rpx;
+  font-weight: bold;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  color: #333333;
+  background: #f7f7f7;
+}
+.city-list-wrap .city-list-li.data-v-6f9503b8 {
+  background: #fff;
+}
+.city-list-wrap .city-list-li view.data-v-6f9503b8 {
+  margin: 0 32rpx;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.city-list-wrap .city-list-li:last-child view.data-v-6f9503b8 {
+  border: none;
+}
+
