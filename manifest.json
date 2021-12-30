@@ -13,7 +13,7 @@
             }
         },
         "usingComponents" : true,
-        "nvueCompiler" : "uni-app",
+        "nvueCompiler" : "weex",
         "compilerVersion" : 3,
         "splashscreen" : {
             "alwaysShowBeforeRender" : true,

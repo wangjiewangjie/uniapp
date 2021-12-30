@@ -1,44 +1,65 @@
 {
-	"easycom": {
-		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
-	},
-	"pages": [
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "首页"
-			}
-		},
-		{
-			"path": "pages/center/center",
-			"style": {
-				"navigationBarTitleText": "个人中心"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uView",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
-	"tabBar": {
-		"color": "#ccc",
-		"selectedColor": "#FF6600",
-		"backgroundColor": "#ffffff",
-		"list": [
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/tabbar/index.jpg",
-				"selectedIconPath": "static/image/tabbar/index_selected.jpg",
-				"text": "首页"
-			},
-			{
-				"pagePath": "pages/center/center",
-				"iconPath": "static/image/tabbar/center.jpg",
-				"selectedIconPath": "static/image/tabbar/center_selected.jpg",
-				"text": "我"
-			}
-		]
-	}
+  "easycom": {
+    "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/center/center",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "usingSwanComponents": {
+          "editor": "dynamicLib://editorLib/editor"
+        }
+      }
+    },
+    {
+      "path": "pages/center/editor/editor",
+      "style": {
+        "navigationBarTitleText": "富文本"
+      }
+    },
+    {
+      "path": "pages/center/upload/upload",
+      "style": {
+        "navigationBarTitleText": "上传"
+      }
+    },
+    {
+      "path": "pages/center/map/map",
+      "style": {
+        "navigationBarTitleText": "地图"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uView",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#FF6600",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/tabbar/index.jpg",
+        "selectedIconPath": "static/image/tabbar/index_selected.jpg",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/image/tabbar/center.jpg",
+        "selectedIconPath": "static/image/tabbar/center_selected.jpg",
+        "text": "我"
+      }
+    ]
+  }
 }

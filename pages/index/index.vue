@@ -13,10 +13,21 @@ export default {
   data() {
     return {};
   },
-  onLoad() {},
-  methods: {},
+  onLoad() {
+    this.fn()
+  },
+  methods: {
+    async fn() {
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('开始');
+          resolve();
+        }, 3000);
+      });
+      console.log(1);
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
