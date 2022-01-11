@@ -18,14 +18,14 @@ export default {
         {
           latitude: 39.909,
           longitude: 116.39742,
-          iconPath: '../../../static/image/map/map-markers.png',
+          iconPath: '/static/image/map/map-markers.png',
           width: 40,
           height: 40,
         },
         {
           latitude: 39.9,
           longitude: 116.39,
-          iconPath: '../../../static/image/map/map-markers.png',
+          iconPath: '/static/image/map/map-markers.png',
           width: 40,
           height: 40,
         },
