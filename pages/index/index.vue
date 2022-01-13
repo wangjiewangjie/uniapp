@@ -1,13 +1,18 @@
 <template>
   <view class="content">
-    <u-navbar :is-back="false" :background="navbarBackground">
+    <u-navbar
+      :is-back="false"
+      :background="navbarBackground"
+      :border-bottom="false"
+    >
       <view class="slot-wrap">
         <view class="navbar-search_wrap">
           <view
             class="navbar-location"
             :class="city == '定位中' ? 'loading' : ''"
-            ><text class="navbar-city_text">{{ city }}</text></view
           >
+            <text class="navbar-city_text">{{ city }}</text>
+          </view>
           <view class="navbar-search_btn">
             <text class="iconfont iconsousuo"></text>
             <text class="navbar-search_placeholder">请输入商品名称</text>
@@ -19,6 +24,15 @@
         </view>
       </view>
     </u-navbar>
+    <!--/ nav -->
+
+    <view class="banner-wrap">
+      <view class="banner">
+        <u-swiper :list="list" :height="320" :border-radius="16"></u-swiper>
+      </view>
+    </view>
+
+    <u-tabbar v-model="current" :list="tabbarList"></u-tabbar>
   </view>
 </template>
 
@@ -31,6 +45,40 @@ export default {
         background: '#ff6600',
       },
       city: '定位中',
+      list: [
+        {
+          image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
+          title: '昨夜星辰昨夜风，画楼西畔桂堂东',
+        },
+        {
+          image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
+          title: '身无彩凤双飞翼，心有灵犀一点通',
+        },
+        {
+          image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
+          title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳',
+        },
+      ],
+
+      tabbarList: [
+        {
+          iconPath: 'home',
+          selectedIconPath: 'home-fill',
+          text: '首页',
+          isDot: false,
+          customIcon: true,
+          pagePath:'/pages/index/index'
+        },
+        {
+          iconPath: 'account',
+          selectedIconPath: 'account-fill',
+          text: '我的',
+          isDot: false,
+          customIcon: true,
+          pagePath:'/pages/center/center'
+        },
+      ],
+      current: 0,
     };
   },
   onLoad() {
@@ -51,81 +99,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.slot-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 32rpx;
-  width: 100%;
-
-  .navbar-search_wrap {
-    display: flex;
-    align-items: center;
-    width: 606rpx;
-    height: 64rpx;
-    border-radius: 32rpx;
-    background: #fff;
-  }
-
-  .navbar-location {
-    display: inline-flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 10rpx 32rpx;
-    border-right: 1rpx solid $u-type-primary;
-    width: 200rpx;
-    height: 44rpx;
-    font-size: 32rpx;
-    color: #333333;
-    .navbar-city_text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  .navbar-search_btn {
-    display: flex;
-    align-items: center;
-    padding: 0 32rpx;
-    .iconfont {
-      margin-right: 8rpx;
-    }
-    .navbar-search_placeholder {
-      color: #cccccc;
-    }
-  }
-
-  .navbar-info_btn {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    .iconfont {
-      margin-bottom: 6rpx;
-    }
-    .navbar-info_text {
-      font-size: 24rpx;
-    }
-  }
-
-  /* loading动画 */
-  .loading:after {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
-    animation: ellipsis 2s infinite;
-    content: '\2026';
-  }
-
-  @keyframes ellipsis {
-    from {
-      width: 4rpx;
-    }
-
-    to {
-      width: 36rpx;
-    }
-  }
-}
+@import './index.scss';
 </style>
