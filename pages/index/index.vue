@@ -14,12 +14,12 @@
             <text class="navbar-city_text">{{ city }}</text>
           </view>
           <view class="navbar-search_btn">
-            <text class="iconfont iconsousuo"></text>
+            <text class="custom-icon custom-icon-icon-search"></text>
             <text class="navbar-search_placeholder">请输入商品名称</text>
           </view>
         </view>
         <view class="navbar-info_btn">
-          <text class="iconfont iconmessage"></text>
+          <text class="custom-icon custom-icon-xiaoxi"></text>
           <text class="navbar-info_text">消息</text>
         </view>
       </view>
@@ -62,16 +62,16 @@ export default {
 
       tabbarList: [
         {
-          iconPath: 'home',
-          selectedIconPath: 'home-fill',
+          iconPath: '/static/image/tabbar/index.png',
+          selectedIconPath: '/static/image/tabbar/index_active.png',
           text: '首页',
           isDot: false,
           customIcon: true,
           pagePath:'/pages/index/index'
         },
         {
-          iconPath: 'account',
-          selectedIconPath: 'account-fill',
+          iconPath: '/static/image/tabbar/mine.png',
+          selectedIconPath: '/static/image/tabbar/mine_active.png',
           text: '我的',
           isDot: false,
           customIcon: true,

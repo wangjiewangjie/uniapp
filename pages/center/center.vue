@@ -24,16 +24,16 @@ export default {
       ],
       tabbarList: [
         {
-          iconPath: 'iconhome-unselected1',
-          selectedIconPath: 'iconhome-selected',
+          iconPath: '/static/image/tabbar/index.png',
+          selectedIconPath: '/static/image/tabbar/index_active.png',
           text: '首页',
           isDot: false,
           customIcon: true,
           pagePath: '/pages/index/index',
         },
         {
-          iconPath: 'iconmy-unselected',
-          selectedIconPath: 'iconmy-selected1',
+          iconPath: '/static/image/tabbar/mine.png',
+          selectedIconPath: '/static/image/tabbar/mine_active.png',
           text: '我的',
           isDot: false,
           customIcon: true,
