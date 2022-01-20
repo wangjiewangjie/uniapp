@@ -3,11 +3,11 @@ const DEVELOPER_TYPE = process.env.NODE_ENV;
 let apiHost;
 
 const DEVELOPMENT_CONFIG = {
-  apiHost: '', //生产环境
+  apiHost: '121.5.127.6:3000', //生产环境
 };
 
 const PRODUCTION_CONFIG = {
-  apiHost: '', //生产环境
+  apiHost: '121.5.127.6:3000', //生产环境
 };
 
 if (DEVELOPER_TYPE === 'development') {

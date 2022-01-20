@@ -67,7 +67,7 @@ export default {
           text: '首页',
           isDot: false,
           customIcon: true,
-          pagePath:'/pages/index/index'
+          pagePath: '/pages/index/index',
         },
         {
           iconPath: '/static/image/tabbar/mine.png',
@@ -75,7 +75,7 @@ export default {
           text: '我的',
           isDot: false,
           customIcon: true,
-          pagePath:'/pages/center/center'
+          pagePath: '/pages/center/center',
         },
       ],
       current: 0,
@@ -83,17 +83,26 @@ export default {
   },
   onLoad() {
     this.getlocation();
+
+    this.$api.banner({ type: 2 }).then((res) => {
+      console.log(res);
+    });
   },
   methods: {
     async getlocation() {
       let result = await location.getLocationFn();
       let addressComponent = result.addressComponent;
-      console.log(JSON.stringify(addressComponent));
+      // console.log(JSON.stringify(addressComponent));
       this.city =
         typeof addressComponent.city === 'string'
           ? `${addressComponent.city}${addressComponent.district}`
           : addressComponent.province;
     },
+
+    // async bannerApi() {
+    //   let res = await this.$api.banner({ type: 2 });
+    //   console.log(res);
+    // },
   },
 };
 </script>
