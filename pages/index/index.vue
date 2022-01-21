@@ -15,20 +15,22 @@
           </view>
           <view class="navbar-search_btn">
             <text class="custom-icon custom-icon-icon-search"></text>
-            <text class="navbar-search_placeholder">请输入商品名称</text>
+            <text class="navbar-search_placeholder"></text>
           </view>
         </view>
-        <view class="navbar-info_btn">
-          <text class="custom-icon custom-icon-xiaoxi"></text>
-          <text class="navbar-info_text">消息</text>
-        </view>
+
       </view>
     </u-navbar>
     <!--/ nav -->
 
     <view class="banner-wrap">
       <view class="banner">
-        <u-swiper :list="list" :height="320" :border-radius="16"></u-swiper>
+        <u-swiper
+          :list="bannerList"
+          name="pic"
+          :height="320"
+          :border-radius="16"
+        ></u-swiper>
       </view>
     </view>
 
@@ -45,20 +47,7 @@ export default {
         background: '#ff6600',
       },
       city: '定位中',
-      list: [
-        {
-          image: 'https://cdn.uviewui.com/uview/swiper/1.jpg',
-          title: '昨夜星辰昨夜风，画楼西畔桂堂东',
-        },
-        {
-          image: 'https://cdn.uviewui.com/uview/swiper/2.jpg',
-          title: '身无彩凤双飞翼，心有灵犀一点通',
-        },
-        {
-          image: 'https://cdn.uviewui.com/uview/swiper/3.jpg',
-          title: '谁念西风独自凉，萧萧黄叶闭疏窗，沉思往事立残阳',
-        },
-      ],
+      bannerList: [],
 
       tabbarList: [
         {
@@ -84,9 +73,7 @@ export default {
   onLoad() {
     this.getlocation();
 
-    this.$api.banner({ type: 2 }).then((res) => {
-      console.log(res);
-    });
+    this.bannerApi();
   },
   methods: {
     async getlocation() {
@@ -98,11 +85,11 @@ export default {
           ? `${addressComponent.city}${addressComponent.district}`
           : addressComponent.province;
     },
-
-    // async bannerApi() {
-    //   let res = await this.$api.banner({ type: 2 });
-    //   console.log(res);
-    // },
+    async bannerApi() {
+      let params = { type: 2 };
+      let result = await this.$api.banner(params);
+      this.bannerList = result.banners;
+    },
   },
 };
 </script>

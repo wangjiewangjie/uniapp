@@ -31,7 +31,7 @@ const install = (Vue, vm) => {
     // 所以哪怕您重新登录修改了Storage，下一次的请求将会是最新值
     // const token = uni.getStorageSync('token');
     // config.header.token = token;
-    config.header.Token = '';
+    // config.header.Token = '';
 
     // 可以对某个url进行特别处理，此url参数为this.$u.get(url)中的url值
     // if(config.url == '/user/login') config.header.noToken = true;
@@ -47,7 +47,7 @@ const install = (Vue, vm) => {
       // res为服务端返回值，可能有code，result等字段
       // 这里对res.result进行返回，将会在this.$u.post(url).then(res => {})的then回调中的res的到
       // 如果配置了originalData为true，请留意这里的返回值
-      return res.result;
+      return res;
     } else if (res.code == 201) {
       // 假设201为token失效，这里跳转登录
       vm.$u.toast('验证失败，请重新登录');
