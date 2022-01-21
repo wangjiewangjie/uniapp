@@ -13,28 +13,7 @@
     {
       "path": "pages/center/center",
       "style": {
-        "navigationBarTitleText": "个人中心",
-        "usingSwanComponents": {
-          "editor": "dynamicLib://editorLib/editor"
-        }
-      }
-    },
-    {
-      "path": "pages/center/editor/editor",
-      "style": {
-        "navigationBarTitleText": "富文本"
-      }
-    },
-    {
-      "path": "pages/center/upload/upload",
-      "style": {
-        "navigationBarTitleText": "上传"
-      }
-    },
-    {
-      "path": "pages/center/map/map",
-      "style": {
-        "navigationBarTitleText": "地图"
+        "navigationBarTitleText": "个人中心"
       }
     }
   ],
@@ -50,16 +29,10 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "static/image/tabbar/index.jpg",
-        "selectedIconPath": "static/image/tabbar/index_selected.jpg",
-        "text": "首页"
+        "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/center/center",
-        "iconPath": "static/image/tabbar/center.jpg",
-        "selectedIconPath": "static/image/tabbar/center_selected.jpg",
-        "text": "我"
+        "pagePath": "pages/center/center"
       }
     ]
   }
