@@ -1,30 +1,22 @@
 <template>
   <view class="page">
     个人中心
-    <u-tabbar v-model="current" :list="tabbarList"></u-tabbar>
+    <u-tabbar
+      v-model="current"
+      :list="tabbarList"
+      :icon-size="50"
+      active-color="#27C087"
+      inactive-color="#333"
+    ></u-tabbar>
   </view>
 </template>
 
 <script>
+import config from '@/config/config';
 export default {
   data() {
     return {
-      tabbarList: [
-        {
-          iconPath: 'listing-content',
-          selectedIconPath: 'listing-content-fill',
-          isDot: false,
-          customIcon: true,
-          pagePath: '/pages/index/index',
-        },
-        {
-          iconPath: 'smile',
-          selectedIconPath: 'smile-fill',
-          isDot: false,
-          customIcon: true,
-          pagePath: '/pages/center/center',
-        },
-      ],
+      tabbarList: config.tabbarList,
       current: 1,
     };
   },
@@ -32,4 +24,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

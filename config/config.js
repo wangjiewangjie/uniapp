@@ -36,4 +36,20 @@ export default {
   deviceId: '', //设备 id
   apiHost, //接口地址
   changeDeveloperType,
+  tabbarList: [
+    {
+      iconPath: 'listing-content',
+      selectedIconPath: 'listing-content-fill',
+      isDot: false,
+      customIcon: true,
+      pagePath: '/pages/index/index',
+    },
+    {
+      iconPath: 'smile',
+      selectedIconPath: 'smile-fill',
+      isDot: false,
+      customIcon: true,
+      pagePath: '/pages/center/center',
+    },
+  ],
 };
