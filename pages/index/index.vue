@@ -12,9 +12,7 @@
     <!--/ nav -->
 
     <u-popup class="sidebar-wrap" v-model="show">
-      <view class="sidebar-item">
-        <u-section title="今日热门" sub-title="更多" :right="false" :show-line="false" :arrow="true"></u-section>
-      </view>
+      <view class="sidebar-item" @click="routerLogin">登录</view>
     </u-popup>
     <!-- /弹窗 -->
 
@@ -56,6 +54,11 @@ export default {
       let params = { type: 2 };
       let result = await this.$api.banner(params);
       this.bannerList = result.banners;
+    },
+    routerLogin() {
+      this.$u.route({
+        url: 'pages/login/login',
+      });
     },
   },
 };

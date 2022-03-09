@@ -3,11 +3,11 @@ const DEVELOPER_TYPE = process.env.NODE_ENV;
 let apiHost;
 
 const DEVELOPMENT_CONFIG = {
-  apiHost: 'http://121.5.127.6:3000', //生产环境
+  apiHost: 'http://101.43.98.59:3000', //生产环境
 };
 
 const PRODUCTION_CONFIG = {
-  apiHost: 'http://121.5.127.6:3000', //生产环境
+  apiHost: 'http://101.43.98.59:3000', //生产环境
 };
 
 if (DEVELOPER_TYPE === 'development') {
@@ -49,7 +49,7 @@ export default {
       selectedIconPath: 'smile-fill',
       isDot: false,
       customIcon: true,
-      pagePath: '/pages/center/center',
+      pagePath: '/pages/mine/mine',
     },
   ],
 };

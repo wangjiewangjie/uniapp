@@ -11,9 +11,17 @@
       }
     },
     {
-      "path": "pages/center/center",
+      "path": "pages/login/login",
       "style": {
-        "navigationBarTitleText": "个人中心"
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "navigationStyle": "custom"
       }
     }
   ],
@@ -32,7 +40,7 @@
         "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/center/center"
+        "pagePath": "pages/mine/mine"
       }
     ]
   }

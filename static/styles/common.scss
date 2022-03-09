@@ -1,8 +1,12 @@
+page {
+  height: 100%;
+  background: $u-bg-color;
+}
 
 /* tabbar */
 /deep/.u-tabbar__content__item__button {
   position: static !important;
-  transform:none !important;
+  transform: none !important;
   display: flex;
   justify-content: center;
   align-items: center;
